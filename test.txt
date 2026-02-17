@@ -1,0 +1,35 @@
+category: s
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+category: p
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.KO 
+category: d
+1.KO 2.KO 3.OK 4.KO 5.KO 6.KO 7.KO 8.KO 9.KO 10.KO 11.KO 12.KO 13.KO 14.KO 15.KO 16.KO 17.KO 18.KO 19.KO 20.KO 21.KO 22.KO 23.KO 24.KO 25.KO 26.KO 27.KO 28.KO 29.KO 
+category: i
+1.KO 2.KO 3.OK 4.KO 5.KO 6.KO 7.KO 8.KO 9.KO 10.KO 11.KO 12.KO 13.KO 14.KO 15.KO 16.KO 17.KO 18.KO 19.KO 20.KO 21.KO 22.KO 23.KO 24.KO 25.KO 26.KO 27.KO 28.KO 29.KO 
+category: u
+1.KO 2.KO 3.KO 4.KO 5.KO 6.KO 7.KO 8.KO 9.KO 10.KO 11.KO 12.KO 13.KO 14.KO 15.KO 16.KO 17.KO 18.KO 19.KO 20.KO 21.KO 22.KO 23.KO 24.KO 25.KO 26.KO 27.KO 28.KO 29.KO 
+category: x
+1.KO 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23.OK 24.OK 25.KO 26.OK 27.OK 28.OK 29.KO 30.OK 31.OK 
+category: X
+1.KO 2.KO 3.KO 4.KO 5.KO 6.KO 7.KO 8.KO 9.KO 10.KO 11.KO 12.KO 13.KO 14.KO 15.KO 16.KO 17.KO 18.KO 19.KO 20.KO 21.KO 22.KO 23.KO 24.KO 25.KO 26.KO 27.KO 28.KO 29.KO 30.KO 31.KO 
+category: %
+1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 
+category: mix
+==1181830== Use of uninitialised value of size 8
+==1181830==    at 0x405A48: ft_putstr (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x405C51: ft_find (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x4058EA: ft_printf (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x4053C7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1181830==    by 0x404E2C: main (mix_test.cpp:26)
+==1181830==  Uninitialised value was created by a stack allocation
+==1181830==    at 0x404E6D: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:38)
+==1181830== 
+==1181830== Invalid read of size 1
+==1181830==    at 0x405A48: ft_putstr (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x405C51: ft_find (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x4058EA: ft_printf (in /home/algungor/Desktop/printf/printfTester/mix_test)
+==1181830==    by 0x4053C7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1181830==    by 0x404E2C: main (mix_test.cpp:26)
+==1181830==  Address 0x2a is not stack'd, malloc'd or (recently) free'd
+==1181830== 
+1.SIGSEGV 
