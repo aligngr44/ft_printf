@@ -24,5 +24,6 @@ int	ft_find(char c, va_list *ac);
 int	ft_putstr(char *s);
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
+int ft_unnbr(unsigned int n);
 
 #endif

@@ -14,28 +14,34 @@
 
 int	x_control(unsigned long i, char c)
 {
-	unsigned int	x;
+	unsigned int	count;
 
-	x = 0;
+	count = 0;
 	if (i == 0)
 		return (ft_putchar('0'));
-	x = x_control(i / 16, c);
+	if (i >= 16)
+		count += x_control(i / 16, c);
 	if (c == 'X')
-		write(1, &"0123456789ABCDEF"[i % 16], 1);
+		count += write(1, &"0123456789ABCDEF"[i % 16], 1);
 	else
-		write(1, &"0123456789abcdef"[i % 16], 1);
-	return (x + 1);
+		count += write(1, &"0123456789abcdef"[i % 16], 1);
+	return (count);
 }
+
 int	p_control(void *p, char c)
 {
 	unsigned long	i;
+	int				count;
 
+	(void)c;
 	i = (unsigned long)p;
 	if (!p)
 		return (write(1, "(nil)", 5));
-	write(1, "0x", 2);
-	return (x_control(i, c) + 2);
+	count = write(1, "0x", 2);
+	count += x_control(i, 'x');
+	return (count);
 }
+
 int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
@@ -69,14 +75,25 @@ int	ft_putnbr(int n)
 	}
 	if (s > 9)
 	{
-		ft_putnbr(s / 10);
+		len += ft_putnbr(s / 10);
 		total = (s % 10) + 48;
 		len += ft_putchar(total);
 	}
 	else if (s <= 9)
 		len += ft_putchar(s + '0');
-	return (len + 1);
+	return (len);
 }
+int ft_unnbr(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	if (n >= 10)
+		count += ft_unnbr(n / 10);          // önce üst basamakları yaz
+	count += ft_putchar((n % 10) + '0');      // sonra son basamağı yaz
+	return (count);
+}
+
 
 int	ft_find(char c, va_list *ac)
 {
@@ -94,5 +111,7 @@ int	ft_find(char c, va_list *ac)
 		return (x_control(va_arg(*ac, unsigned int), c));
 	if (c == 'p')
 		return (p_control(va_arg(*ac, void *), c));
+	if(c == 'u')
+		return (ft_unnbr(va_arg(*ac, unsigned int)));
 	return (-1);
 }

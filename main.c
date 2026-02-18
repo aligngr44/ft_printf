@@ -26,15 +26,15 @@
 #include <stdio.h>
 int main()
 {
-    int a = 0;
+    int a = -222;    
     // p_control(&a);
     // printf("     ----p_cont----\n");
     // printf("%p", &a);
     // printf("     ----printf----\n");
     // x_control(a);
     // printf("     ----x_cont----\n");
-    int x = ft_printf("asd -> %x\n", a);
-   int y = printf("asd -> %x\n", a);
+    int x = ft_printf("%c %s %d %i\n", 'A', "ok", -42, 42);
+   int y = printf("%c %s %d %i\n", 'A', "ok", -42, 42);
    printf("proje-> %d\n", x);
    printf("orj ->%d\n", y);
 }
