@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 // int ex(int c, ...)
 // {
 //    va_list ar;
@@ -26,15 +26,15 @@
 #include <stdio.h>
 int main()
 {
-    // int a = 13;
+    int a = 0;
     // p_control(&a);
     // printf("     ----p_cont----\n");
     // printf("%p", &a);
     // printf("     ----printf----\n");
     // x_control(a);
     // printf("     ----x_cont----\n");
-    int x = ft_printf("asd -> %p\n", &main);
-   int y = printf("asd -> %p\n", &main);
+    int x = ft_printf("asd -> %x\n", a);
+   int y = printf("asd -> %x\n", a);
    printf("proje-> %d\n", x);
-   printf("orj ->%d", y);
+   printf("orj ->%d\n", y);
 }

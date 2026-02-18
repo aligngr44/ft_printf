@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 
-int	x_control(unsigned long n);
-int	p_control(void *p);
+int	x_control(unsigned long i, char c);
+int	p_control(void *p, char c);
 int	ft_find(char c, va_list *ac);
 int	ft_putstr(char *s);
 int	ft_putchar(char c);
