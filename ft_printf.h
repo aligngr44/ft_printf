@@ -18,12 +18,13 @@
 
 int	ft_printf(const char *format, ...);
 
-int	x_control(unsigned long i, char c);
-int	p_control(void *p, char c);
+int	ft_x_control(unsigned long i, char c);
+int	ft_p_control(void *p, char c);
 int	ft_find(char c, va_list *ac);
 int	ft_putstr(char *s);
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
-int ft_unnbr(unsigned int n);
+int	ft_unnbr(unsigned int n);
+int	ft_putchar(char c);
 
 #endif

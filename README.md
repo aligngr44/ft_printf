@@ -1,30 +1,76 @@
 *This project has been created as part of the 42 curriculum by algungor.*
 ## Description
+ft_printf, C dilindeki standart printf fonksiyonunun yeniden implementasyonudur.
+Bu proje, variadic fonksiyonlar, format specifier mantığı, hexadecimal dönüşüm, pointer gösterimi ve output kontrolü gibi düşük seviye C konularını derinlemesine anlamayı amaçlar.
 
+Proje kapsamında aşağıdaki formatlar desteklenmektedir:
+```
+%c → karakter
+
+%s → string
+
+%p → pointer adresi
+
+%d / %i → decimal integer
+
+%u → unsigned integer
+
+%x / %X → hexadecimal integer
+
+%% → yüzde karakteri
+```
+Fonksiyon, yazdırılan toplam karakter sayısını int olarak döndürür.
 ## Instructions
+#### Compilation
+```
+make
+```
+Bu komut libftprintf.a statik kütüphanesini oluşturur.
+#### Clean
+```
+make clean
+```
+Object dosyalarını siler.
+```
+make fclean
+```
+Object dosyaları ve kütüphaneyi siler.
+### 🛠 Usage Example
+```
+#include "ft_printf.h"
 
+int main()
+{
+    ft_printf("Merhaba %s\n", "Dünya");
+    return (0);
+}
+```
+Derlemek için:
+```
+cc main.c libftprintf.a
+```
 ## Resources
+man printf ve man stdarg
 
-📖 Bölüm V – README Gereksinimleri
+C dilinde variadic fonksiyonlar üzerine teknik dokümanlar
 
-README.md repo root’ta olmalı.
+Hexadecimal sayı sistemi hakkında akademik ve teknik kaynaklar
 
-İçermesi gerekenler:
+Pointer ve bellek yapısı üzerine makaleler
 
-1️⃣ İlk satır italic olacak ve şöyle yazacak:
+YouTube üzerinde C programlama ve printf implementasyonu üzerine eğitim videoları
+## AI Usage
 
-This project has been created as part of the 42 curriculum by <login>
+Proje geliştirme sürecinde yapay zekâ araçlarından kod üretimi yapılmadan yararlanılmıştır.
 
-2️⃣ Description bölümü
-3️⃣ Instructions (derleme, çalıştırma vb.)
-4️⃣ Resources bölümü:
+Yapay zekâ şu amaçlarla kullanılmıştır:
 
-Dokümanlar
+Kavramsal konuları daha iyi anlamak
 
-Makaleler
+Hata mesajlarını yorumlamak
 
-Tutoriallar
+Dokümantasyon ve README hazırlamak
 
-AI’ı nasıl kullandığın
+Öğrenme sürecini destekleyici açıklamalar almak
 
-5️⃣ Algoritma ve veri yapısının detaylı açıklaması
+Tüm kod yazımı ve algoritma tasarımı manuel olarak gerçekleştirilmiştir.
