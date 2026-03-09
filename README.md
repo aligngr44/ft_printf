@@ -20,6 +20,15 @@ Proje kapsamında aşağıdaki formatlar desteklenmektedir:
 %% → yüzde karakteri
 ```
 Fonksiyon, yazdırılan toplam karakter sayısını int olarak döndürür.
+### Variadic Functions (va_list)
+
+ft_printf fonksiyonu değişken sayıda argüman alabilen bir variadic fonksiyondur.
+Bu nedenle stdarg.h kütüphanesinde bulunan va_list, va_start, va_arg ve va_end makroları kullanılır.
+
+Bu yapı sayesinde fonksiyona gönderilen ek parametreler sırayla okunabilir.
+Format string içerisinde bulunan format specifier’lar (%d, %s, %x vb.) kontrol edilerek, ilgili veri tipi va_arg ile alınır ve uygun şekilde yazdırılır.
+
+Bu mekanizma printf fonksiyonunun farklı veri tiplerini tek bir fonksiyon üzerinden işleyebilmesini sağlar.
 ## Instructions
 #### Compilation
 ```
