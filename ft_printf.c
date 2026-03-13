@@ -6,7 +6,7 @@
 /*   By: algungor <algungor@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 02:15:24 by algungor          #+#    #+#             */
-/*   Updated: 2026/03/13 22:12:44 by algungor         ###   ########.fr       */
+/*   Updated: 2026/03/14 02:16:38 by algungor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static int	ft_percent(const char *format, int *i, va_list *ac)
 	int	check;
 
 	(*i)++;
-	if (format[*i] == '\0')
-		return (-1);
+	if (!format)
+		return (0);
 	check = ft_find(format[*i], ac);
 	(*i)++;
 	return (check);
